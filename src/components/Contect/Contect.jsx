@@ -1,11 +1,17 @@
 import { FiSearch } from "react-icons/fi";
 import { AiFillPlusCircle } from "react-icons/ai";
+import { PiUserCircleThin } from "react-icons/pi";
+import { TbEditCircle } from "react-icons/tb";
+import { MdDeleteForever } from "react-icons/md";
 
 const Contect = () => {
-  const ContextList = []; //only for ui
-
-
-
+  const ContextList = [
+    {
+      name: "John Doe",
+      email: "johndoe@example.com",
+      age: 30,
+    },
+  ];
 
   return (
     <>
@@ -35,6 +41,34 @@ const Contect = () => {
               <img src="/HandsContact.png" alt="profileLogo" />
             </div>
             <div>No Contact Found...</div>
+          </div>
+        )}
+      </section>
+
+      <section className="contactList">
+        {ContextList.length > 0 && (
+          <div className="contextLists mt-5">
+            <div className="bg-[#FFEAAE] h-[64px] flex justify-between w-[360px] rounded-lg items-center">
+              <div className="flex gap-2">
+                <PiUserCircleThin
+                  color={"F6820C"}
+                  size={"48px"}
+                  className="ml-1"
+                />
+                <div className="">
+                  <h2 className="font-medium">Lucky Hudda</h2>
+                  <div>sdfsdsgs@gmaiil.com</div>
+                </div>
+              </div>
+              <div className="flex justify-between items-center gap-1 mr-1">
+                <div>
+                  <TbEditCircle size={"32px"} />
+                </div>
+                <div>
+                  <MdDeleteForever size={"32px"} color="red" />
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </section>
